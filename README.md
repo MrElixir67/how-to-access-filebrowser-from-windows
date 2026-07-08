@@ -1,6 +1,11 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-Windows-blue)](#)
+
 # How to Access File Browser from Windows Explorer
 
 Access your File Browser storage as a mapped drive in Windows — browse, edit, and save files directly from File Explorer.
+
+![Architecture](assets/architecture.svg)
 
 ## Why?
 
