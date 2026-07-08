@@ -94,7 +94,7 @@ systemctl enable --now wsgidav.service
 rclone config create myfilebrowser webdav url http://YOUR_SERVER_IP:8081/ vendor other
 ```
 
-Replace `YOUR_SERVER_IP` with the actual IP of your server (e.g. `10.10.10.115`).
+Replace `YOUR_SERVER_IP` with the actual IP or hostname of your server.
 
 ## Step 4: Mount as a Drive
 
@@ -139,11 +139,11 @@ rclone mount myfilebrowser: X: --vfs-cache-mode=full --exclude "System Volume In
 If you have multiple storage locations (e.g. USB drives), add multiple remotes and mount each to a different drive letter:
 
 ```batch
-rclone config create usb1 webdav url http://10.10.10.118:8081/ vendor other
-rclone config create usb2 webdav url http://10.10.10.119:8081/ vendor other
+rclone config create storage1 webdav url http://SERVER_IP_1:8081/ vendor other
+rclone config create storage2 webdav url http://SERVER_IP_2:8081/ vendor other
 
-rclone mount usb1: Y: --vfs-cache-mode=full
-rclone mount usb2: Z: --vfs-cache-mode=full
+rclone mount storage1: Y: --vfs-cache-mode=full
+rclone mount storage2: Z: --vfs-cache-mode=full
 ```
 
 ## Quick Reference
@@ -167,4 +167,4 @@ rclone mount usb2: Z: --vfs-cache-mode=full
 
 ## Related
 
-- [How to Turn Your Flashdisk Into Cloud Storage](https://github.com/MrElixir67/how-to-turn-your-flashdisk-into-cloudstorage) — Server-side setup using Proxmox LXC + File Browser + Cloudflare Tunnel
+- [How to Turn Your Flashdisk Into Cloud Storage](https://github.com/MrElixir67/how-to-turn-your-flashdisk-into-cloudstorage) — Server-side setup using File Browser + Cloudflare Tunnel
